@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="scripts/ticker/ticker.css"/>
+        <link rel="stylesheet" type="text/css" href="main.css" media="screen"/>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads -->
+        <script data-main="scripts/main" src="scripts/require.js"></script>
+        <script src="scripts/ProtoBuf.js"></script>
+        <script src="scripts/ByteBuffer.js"></script>
+        <script src="scripts/Long.js"></script>
+        <!-- user defined javascript files -->
+        <script src="scripts/metareal.js"></script>
+
+        <!-- JavaScript files that create and control the ticker functions -->
+        <script src="scripts/ticker/jquery.marquee.min.js"></script>
+        <script src="scripts/ticker/ticker.js"></script>
+
+        <style>
+            body  {
+              background-image: url("img/banner.jpg");
+              background-color: #cccccc;
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+
+    <div class="containner">
+        <div class ="wrap">
+            <div id="lst">
+            </div>
+        </div>
+    </div>
+
+
+    <body>
+        <div class="container">
+          <div class="content">
+           <div class="header">
+               <a href="http://www.cqg.com/"> <img src="img/logo_cqg.png" /> </a>
+               <input id="url" size="45" value="wss://demoapi.cqg.com:443" style="display:none"/>
+               <label id="lableUser">UserName:</label><input id='user'value="XYuWebAPI"/>
+               <label id="lablePass">Password:</label><input id="pass" value="pass" type="password"/>
+               <button id="connect" onclick="connect(); document.getElementById('connect').style='display:none'; document.getElementById('disconnect').style='display:inline';">Connect</button>
+               <button id="disconnect" onclick="disconnect(); document.getElementById('disconnect').style='display:none'; document.getElementById('connect').style='display:inline';" style="display:none" disabled="true">Disconnect</button>
+               <span id="state">No Connection</span>
+           <!-- <br> <br> -->
+               <!-- <button id="logon" onclick="logon(); document.getElementById('logon').style='display:none'; document.getElementById('logoff').style='display:inline';" disabled="true">Logon</button>
+               <button id="logoff" onclick="logoff(); document.getElementById('logoff').style='display:none'; document.getElementById('logon').style='display:inline';" style="display:none" disabled="true">Logoff</button> -->
+           </div>
+           <div class="page">
+               <div class="left">
+                   <label id="lableSymbol">Symbol:</label>
+                   <input id="symbol" value="EP" style="text-transform: uppercase;"align="middle">
+
+                   <button id="addSymbol" onclick="addSymbol()">Add</button>
+                   &nbsp&nbsp
+                   <button id="deleteSymbol" onclick="deleteSymbol()">Delete</button>
+                   <br> <br>
+                   <table id="rtSymbolsTable" class="tableScroll">
+                       <thead class="theadScroll">
+                           <tr><td></td></tr>
+                       </thead>
+                       <tbody id="rtSymbolsTbl" class="tbodyScroll">    </tbody>
+                   </table>
+                   <br> <br>
+                   <div class="buttom_3">
+                       <button id="request" onclick="requestMetadata()" disabled="true">Metadata Request</button>
+                        &nbsp<!-- &nbsp&nbsp&nbsp&nbsp -->
+                       <button id="realTime" onclick="realTimedata()" disabled="true">Real Time Data Request</button>
+                        &nbsp<!-- &nbsp&nbsp&nbsp&nbsp -->
+                       <button id="runTicker" onclick="runTicker()" disabled="true">Run Ticker</button>
+                   </div>
+
+                </div>
+
+                <div class="right">
+                   <h2>Sample </h2>
+                   <p> Sample</p>
+                   <h3> Hello world!</h3>
+                   <ul>
+                     <li>sample </li>
+                     <li>sample </li>
+                     <li> sample</li>
+                   </ul>
+                </div>
+           </div>
+         </div>
+
+           <div class="footer">
+               <p>Copyright © CQG, Inc., 1980-2016. All rights reserved worldwide. CQG®,
+               DOMTrader®, TFlow®, and Data Factory™ are trademarks of CQG, Inc.&nbsp&nbsp&nbsp<a href="http://www.cqg.com/about-cqg/contact-us"> Contact Us</a>
+               <a href="http://www.cqg.com/privacy">Privacy</a></p>
+
+           </div>
+
+        </div>
+
+    </body>
+
+
+</html>

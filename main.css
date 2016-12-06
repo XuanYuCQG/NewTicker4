@@ -1,0 +1,185 @@
+html, body {
+  font-family: sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+	/*position:relative;*/
+	padding:0;
+}
+
+.container{
+	/*height:100%;
+	position:relative;*/
+}
+
+.content{
+  /*min-height: calc(100vh - 70px);*/
+}
+
+.header{
+	width:100%;
+	height:35px;
+	background-color:black;
+	border-top-color:#97fcf9;
+	border-bottom-color:#00605d;
+	border:4px;
+	padding-top:10px;
+	padding-bottom:2px;
+  position:fixed;
+}
+
+.header button{
+	border-radius:2px;
+	border:1px solid #f4f4f4;
+	color:black;
+	font-weight:bold;
+}
+
+img{
+	margin-left:20px;
+	padding-top:1px;
+}
+
+#lableUser, #lablePass{
+	color:white;
+	font-family:Verdana, sans-serif;
+	margin-left:10px;
+}
+
+#connect{
+	color:black;
+	font-family:Verdana, sans-serif;
+	margin-left:10px;
+}
+
+#url{
+	margin-left:8px;
+	margin-right:8px;
+
+}
+
+#user, #pass{
+  border-radius:2px;
+  font-family:Georgia, serif;
+  margin-left:8px;
+  margin-right:10px;
+}
+
+#lableSymbol{
+	color:#00f2ff;
+	/*text-shadow:1px 1px #009699;*/
+	font-family:Convergence, sans-serif;
+	font-size:18px;
+  font-weight：bold;
+}
+
+
+.left button{
+	/*background-color:#b71919;
+	border-radius:8px;
+	border:1.4px solid #680319;
+	color:black;
+  text-shadow:-1px 1px #f94343;*/
+  border:1px solid #10d2e8;
+  border-radius:9px;
+  color:#00f2ff;
+  background-color:transparent;
+	font-weight:bold;
+  display: inline-block;
+  text-decoration: none;
+  padding: 2px 18px;
+  min-width: 100px;
+  text-align: center;
+  font-size: 16px;
+
+}
+
+.left input{
+	background-color:#acbfc4;
+	margin-left:10px;
+	font-size:15px;
+	font-weight:normal;
+	font-family:Georgia, serif;
+  border-radius:3px;
+}
+
+.left{
+	width:40%;
+  height:100%;
+	min-height: calc(100vh - 70px);
+	float:left;
+	margin:90px 0px 0px 40px;
+  position:static;
+
+}
+
+#addSymbol, #deleteSymbol{
+	margin-left:12px;
+  padding:2px 10px;
+
+}
+/*
+#request:clicked{
+	color:#706a6b;
+
+}*/
+
+.right{
+	width:50%;
+	height:100%;
+	float:right;
+	/*border:1px dashed white;*/
+	margin:90px 40px 0px 0px;
+	padding-bottom:20px;
+
+}
+
+.footer{
+	width:100%;
+	height:35px;
+	/*border:1px dashed white;*/
+  /*margin:auto;*/
+	/*position:absolute;*/
+	clear:both;
+	text-align:center;
+	font-size:12px;
+  text-align:center;
+
+
+}
+
+.footer a{
+	color:#015256;
+}
+
+a:hover{
+  color:#44fce6;
+  text-decoration:none;
+}
+
+.tableScroll {
+    width: 50%;
+    margin-left:77px;
+}
+
+.tbodyScroll {
+    background-color: #acbfc4;
+	  height: 200px;
+    width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 2px solid #ddd;
+    border-collapse: collapse;
+		font-size:15px;
+		font-weight:normal;
+		font-family:Georgia, serif;
+    border-radius:3px;
+}
+
+.tdScroll {
+    padding: 3px 3px;
+}
+
+.theadScroll, .tbodyScroll, .trScroll, .tdScroll {
+    display: block;
+}
